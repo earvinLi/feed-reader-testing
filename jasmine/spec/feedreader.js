@@ -99,8 +99,10 @@ $(function() {
        */
 
        it('at least one entry after loading', function() {
-           var numOffeeds = $('.feed a').length;
+           var numOffeeds = $('.feed a').length,
+               entries = $('.feed a article');
            expect(numOffeeds).toBeGreaterThan(0);
+           expect(entries).toHaveClass('entry');
        });
 
      });
