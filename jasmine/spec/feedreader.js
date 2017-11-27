@@ -132,5 +132,9 @@ $(function() {
 
          });
 
+         it('contents change after loading new feeds', function(){
+             expect(firstFeed).not.toEqual(secondFeed);
+         });
+
      });
 }());
