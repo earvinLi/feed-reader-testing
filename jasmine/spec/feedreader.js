@@ -116,5 +116,21 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
 
+         // varibles defining and assigning is quite important
+         var firstFeed,
+             secondFeed;
+
+         // only need one done() function
+         beforeEach(function(done) {
+             loadFeed(0, function() {
+                 firstFeed = $('.feed').html();
+                 loadFeed(1, function() {
+                     secondFeed = $('.feed').html();
+                     done();
+                 });
+             });
+
+         });
+
      });
 }());
