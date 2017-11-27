@@ -98,6 +98,11 @@ $(function() {
        * the use of Jasmine's beforeEach and asynchronous done() function.
        */
 
+       it('at least one entry after loading', function() {
+           var numOffeeds = $('.feed a').length;
+           expect(numOffeeds).toBeGreaterThan(0);
+       });
+
      });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
