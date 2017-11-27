@@ -72,6 +72,14 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
 
+          // test menu toggling by clicking the menu icon
+          it('toggling by clicking', function() {
+              $('.menu-icon-link').click();
+              expect(pageBody).not.toHaveClass('menu-hidden');
+              $('.menu-icon-link').click();
+              expect(pageBody).toHaveClass('menu-hidden');
+          });
+
     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
